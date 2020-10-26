@@ -1,0 +1,47 @@
+    [
+        {
+        "id": 1,
+        "name": "room1 Name",
+        "description": "room3 description room3 description room3 description room3 description",
+        "img": ["pct1.png", "pct2.png", "pct3.png"],
+        "prices": [
+        {
+            "priceName": "price1",
+            "price": "130"
+        },
+        {
+            "priceName": "price2",
+            "price": "160"
+        }]
+      },
+      {
+        "id": 2,
+        "name": "room2 Name",
+        "description": "room3 description room3 description room3 description room3 description",
+        "img": ["pct1.png", "pct2.png", "pct3.png"],
+        "prices": [
+        {
+            "priceName": "price1",
+            "price": "140"
+        },
+        {
+            "priceName": "price2",
+            "price": "170"
+        }]
+      },
+      {
+        "id": 3,
+        "name": "room3 Name",
+        "description": "room3 description room3 description room3 description room3 description",
+        "img": ["pct1.png", "pct2.png", "pct3.png"],
+        "prices": [
+        {
+            "priceName": "price1",
+            "price": "150"
+        },
+        {
+            "priceName": "price2",
+            "price": "180"
+        }]
+      }
+    ]

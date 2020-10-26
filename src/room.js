@@ -1,11 +1,12 @@
 import React, { Component } from "react";
-import { Container, Carousel, Table} from "react-bootstrap";
+import { Container, Carousel, Table, Image} from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/general.css';
 import { useParams } from "react-router-dom";
 import pct1 from "./assets/pct1.png";
 import pct2 from "./assets/pct2.png";
 import pct3 from "./assets/pct3.png"; 
+import data from "./assets/rooms.json"
  
 class Room extends Component {
   render() {
@@ -19,53 +20,17 @@ class Room extends Component {
 
 function ResolveRoom() {
 
-  let room1 = {
-    name: "room1 Name",
-    description: "room1 description room1 description room1 description room1 description",
-    img: [pct1, pct2, pct3],
-    prices: [
-      {
-        priceName: "price1",
-        price: "150",
-      },
-      {
-        priceName: "price2",
-        price: "180",
-      }]
-  };
-
-  let room2 = {
-    name: "room2 Name",
-    description: "room2 description room2 description room2 description room2 description",
-    img: [pct1, pct2, pct3],
-    prices: [
-      {
-        priceName: "price1",
-        price: "150",
-      },
-      {
-        priceName: "price2",
-        price: "180",
-      }]
-  };
-
-  let room3 = {
-    name: "room3 Name",
-    description: "room3 description room3 description room3 description room3 description",
-    img: [pct1, pct2, pct3],
-    prices: [
-    {
-      priceName: "price1",
-      price: "150",
-    },
-    {
-      priceName: "price2",
-      price: "180",
-    }]
+  let images = {
+    "pct1.png": pct1,
+    "pct2.png": pct2,
+    "pct3.png": pct3
   };
 
 
-  let array = {1:room1,2:room2, 3:room3};
+  let array = {};
+  data.map((input) => {
+    array[input.id] = input;
+      });
 
   const { roomId } = useParams();
   
@@ -74,11 +39,12 @@ return (
   <h2>{array[roomId].name}</h2>
   <Carousel>
     {array[roomId].img.map((myImg, i) => {
+      let image = images[myImg];
       return (
-        <Carousel.Item>
-          <img
-          className="d-block w-80"
-          src = {myImg}
+        <Carousel.Item key = {i}>
+          <Image 
+          src = {image}
+          className="d-block w-80" 
           alt="First slide"/>
         </Carousel.Item>
       )
