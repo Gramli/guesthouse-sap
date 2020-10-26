@@ -2,6 +2,7 @@
         {
         "id": 1,
         "name": "room1 Name",
+        "tittleDescription":"somethindasdhaksdas",
         "description": "room3 description room3 description room3 description room3 description",
         "img": ["pct1.png", "pct2.png", "pct3.png"],
         "prices": [
@@ -17,6 +18,7 @@
       {
         "id": 2,
         "name": "room2 Name",
+        "tittleDescription":"somethindasdhaksdas",
         "description": "room3 description room3 description room3 description room3 description",
         "img": ["pct1.png", "pct2.png", "pct3.png"],
         "prices": [
@@ -32,6 +34,7 @@
       {
         "id": 3,
         "name": "room3 Name",
+        "tittleDescription":"somethindasdhaksdas",
         "description": "room3 description room3 description room3 description room3 description",
         "img": ["pct1.png", "pct2.png", "pct3.png"],
         "prices": [

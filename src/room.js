@@ -3,10 +3,8 @@ import { Container, Carousel, Table, Image} from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/general.css';
 import { useParams } from "react-router-dom";
-import pct1 from "./assets/pct1.png";
-import pct2 from "./assets/pct2.png";
-import pct3 from "./assets/pct3.png"; 
-import data from "./assets/rooms.json"
+import { LoadJson } from './loadJson'
+import { GetImageMap } from './imageMap'
  
 class Room extends Component {
   render() {
@@ -20,18 +18,8 @@ class Room extends Component {
 
 function ResolveRoom() {
 
-  let images = {
-    "pct1.png": pct1,
-    "pct2.png": pct2,
-    "pct3.png": pct3
-  };
-
-
-  let array = {};
-  data.map((input) => {
-    array[input.id] = input;
-      });
-
+  let images = GetImageMap();
+  let array = LoadJson();
   const { roomId } = useParams();
   
 return (
@@ -59,7 +47,7 @@ return (
     </tr>
   </thead>
   <tbody>
-  {array[roomId].prices.map((myPrice, i) => {
+  {array[roomId].prices.map((myPrice) => {
       return (
         <tr>
         <td>{myPrice.priceName}</td>

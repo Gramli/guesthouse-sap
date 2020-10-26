@@ -1,20 +1,15 @@
 import React, { Component } from "react";
 import { Nav, Navbar} from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {
-    Route,
-    HashRouter,
-    NavLink,
-    Link,
-  } from "react-router-dom";
+import {Route,HashRouter,NavLink,Link,} from "react-router-dom";
   import Home from "./home";
   import Contact from "./contact";
   import Accomondation from "./accomondation";
   import Restaurant from "./restaurant";
   import Celebration from "./celebrations";
+  import Room from "./room";
   import "./styles/main.css";
   import './styles/general.css';
-  import Room from "./room";
  
 class Main extends Component {
   render() {
