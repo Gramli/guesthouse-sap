@@ -3,8 +3,8 @@ import { Container, Carousel, Table, Image} from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/general.css';
 import { useParams } from "react-router-dom";
-import { LoadJson } from './loadJson'
-import { GetImageMap } from './imageMap'
+import { LoadAccomondationJson } from './loadJson'
+import { GetAccomondationImageMap } from './imageMap'
  
 class Room extends Component {
   render() {
@@ -18,8 +18,8 @@ class Room extends Component {
 
 function ResolveRoom() {
 
-  let images = GetImageMap();
-  let array = LoadJson();
+  let images = GetAccomondationImageMap();
+  let array = LoadAccomondationJson();
   const { roomId } = useParams();
   
 return (

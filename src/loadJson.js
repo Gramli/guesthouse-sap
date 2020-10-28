@@ -1,6 +1,6 @@
 import data from "./assets/rooms.json"
 
-export function LoadJson(){
+export function LoadAccomondationJson(){
     let array = {};
     data.map((input) => {
       array[input.id] = input;

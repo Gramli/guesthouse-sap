@@ -3,8 +3,8 @@ import { Container, Card, Button, CardGroup} from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/general.css';
 import {Link} from "react-router-dom";
-import { LoadJson } from './loadJson'
-import { GetImageMap } from './imageMap'
+import { LoadAccomondationJson } from './loadJson'
+import { GetAccomondationImageMap } from './imageMap'
  
 class Accomondation extends Component {
   render() {
@@ -23,13 +23,13 @@ class Accomondation extends Component {
 }
 
 function ResolveCards() {
-  let images = GetImageMap();
-  let dict = LoadJson();
+  let images = GetAccomondationImageMap();
+  let dict = LoadAccomondationJson();
 
-  var result = [];
+  let result = [];
 
- for(var key in dict){
-    var item = dict[key];
+ for(let key in dict){
+    let item = dict[key];
     result.push(
     <Card style={{ width: '18rem' }}>
     <Card.Img variant="top" src={images[item.img[0]]} />

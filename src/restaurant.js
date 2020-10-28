@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Container, Carousel, Image } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/general.css';
-import { GetImageMap } from './imageMap';
+import { GetRestaurantImageMap } from './imageMap';
 
 class Restaurant extends Component {
   render() {
@@ -18,7 +18,7 @@ class Restaurant extends Component {
 
 function ResolveCarouselItem(){
 
-  let imagesDict = GetImageMap();
+  let imagesDict = GetRestaurantImageMap();
   let result = [];
 
   for(let key in imagesDict){
